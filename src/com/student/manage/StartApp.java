@@ -43,7 +43,7 @@ public class StartApp {
 				int id = Integer.parseInt(br.readLine());
 				if(StudentDao.deleteStudent(id))
 					System.out.println("Student Deleted");
-				else System.out.println("Err.. cant delete student");
+				else System.out.println("Err.. cant delete student!");
 			} else if(choice == 4) {
 				// Exit App
 				System.out.println("Exiting App! Bye Bye!");
