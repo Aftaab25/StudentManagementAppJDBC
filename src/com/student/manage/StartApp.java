@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.student.manage.Student;
+
 public class StartApp {
 
 	public static void main(String[] args) throws IOException{
@@ -13,11 +15,10 @@ public class StartApp {
 			System.out.println("Press 2 to Add Student");
 			System.out.println("Press 3 to Delete Student");
 			System.out.println("Press 4 to Update Student Details");
-			System.out.println("Press 5 to Exi!");
-			System.out.println("heheh");
+			System.out.println("Press 5 to Exit!");
+			
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			
-
 			int choice = Integer.parseInt(br.readLine());
 			System.out.println(choice);
 			
