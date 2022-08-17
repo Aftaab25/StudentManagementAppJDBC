@@ -14,16 +14,16 @@ public class StartApp {
 			System.out.println("Press 1 to Display Student Details");
 			System.out.println("Press 2 to Add Student");
 			System.out.println("Press 3 to Delete Student");
-			System.out.println("Press 4 to Update Student Details");
-			System.out.println("Press 5 to Exit!");
+			System.out.println("Press 4 to Exit!");
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			
 			int choice = Integer.parseInt(br.readLine());
-			System.out.println(choice);
+//			System.out.println(choice);
 			
 			if(choice == 1) {
 				// Display Student Details
+				StudentDao.showAllStudents();
 			} else if(choice == 2) {
 				// Add New Student
 				System.out.println("Name of the Student: ");
@@ -39,10 +39,14 @@ public class StartApp {
 				else System.out.println("An error occurred, Student not added");
 			} else if(choice == 3) {
 				// Delete Student
+				System.out.println("Enter Student ID to delete");
+				int id = Integer.parseInt(br.readLine());
+				if(StudentDao.deleteStudent(id))
+					System.out.println("Student Deleted");
+				else System.out.println("Err.. cant delete student");
 			} else if(choice == 4) {
-				// Update Student Details
-			} else if(choice == 5) {
 				// Exit App
+				System.out.println("Exiting App! Bye Bye!");
 				break;
 			} else {
 //				System.out.println("MEME");
